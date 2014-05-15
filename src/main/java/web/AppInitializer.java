@@ -1,15 +1,13 @@
 package web;
 
-import logic.LogicConfig;
-
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
 
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class<?>[] { LogicConfig.class };
+		// For simplicity there is no application configuration
+		return null;
 	}
 
 	@Override
