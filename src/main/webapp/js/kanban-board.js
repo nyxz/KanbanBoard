@@ -1,3 +1,8 @@
+var TODO = '#todo';
+var IN_PROGRESS = '#progress';
+var DONE = '#done';
+
+
 $(document).ready(function() {
 	loadExampleData();
 	initiateBoards();
@@ -5,15 +10,23 @@ $(document).ready(function() {
 
 function initiateBoards() {
 	$("ul.droptrue").sortable({
-		connectWith : "ul"
+		connectWith : "ul",
+		cancel : ".title",
+		activate : function( event, ui ) {
+			ui.item.addClass("dragged");
+		},
+		deactivate : function( event, ui ) {
+			ui.item.removeClass("dragged");
+		}
 	});
 
 	$("ul.dropfalse").sortable({
 		connectWith : "ul",
-		dropOnEmpty : false
+		dropOnEmpty : false,
+		cancel : ".title"
 	});
 
-	$("#sortable1, #sortable2, #sortable3").disableSelection();
+	$(TODO + ", " + IN_PROGRESS + ", " + DONE).disableSelection();
 }
 
 function loadExampleData() {

@@ -8,24 +8,50 @@ body {
 }
 
 .board {
-	background-color: #000;
-	margin-right: 10px;
-	padding: 5px;
-	float: left;
-	width: 280px;
-}
-
-.board-content {
-	background-color: #EEE;
+	background-color: #BFD5D8;
 	list-style-type: none;
 	padding: 5px;
 	float: left;
-	width: 265;
+	width: 255px;
+	min-height: 30px;
+	display: block;
+	margin-right: 10px;
 }
 
-.board-content li {
+.board li {
 	margin: 5px;
 	padding: 5px;
-	width: 250px;
+	width: 240px;
+	min-height: 30px;
 	font-size: 1.2em;
+	display: block;
+	background-color: #FFF;
+	border-bottom: 1px solid #999999;
+	border-right: 1px solid #999999;
+}
+
+.board .title {
+	background: none;
+	border: none;
+}
+
+.board .title {
+	display: block;
+	margin: 10px 0px 20px 0px;
+}
+
+.board .title:hover {
+	background-color: inherit;
+}
+
+.board li:hover {
+	background-color: rgb(238, 238, 238);
+}
+
+.board li.dragged {
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+	transform: rotate(5deg);
 }
