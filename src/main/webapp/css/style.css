@@ -1,0 +1,31 @@
+body {
+	background-color: rgb(35, 113, 159);
+}
+
+.boards {
+	width: 900px;
+	margin: 140px auto 0 auto;
+}
+
+.board {
+	background-color: #000;
+	margin-right: 10px;
+	padding: 5px;
+	float: left;
+	width: 280px;
+}
+
+.board-content {
+	background-color: #EEE;
+	list-style-type: none;
+	padding: 5px;
+	float: left;
+	width: 265;
+}
+
+.board-content li {
+	margin: 5px;
+	padding: 5px;
+	width: 250px;
+	font-size: 1.2em;
+}
