@@ -3,19 +3,34 @@ body {
 }
 
 .boards {
-	width: 900px;
+	width: 1000px;
 	margin: 140px auto 0 auto;
 }
 
+.board-wrapper {
+	width: 278px;
+	margin-right: 25px;
+	float: left;
+	background-color: #dbdbdb;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.board-wrapper .title {
+	display: block;
+	margin-top: 20px;
+	margin-left: 10px;
+	color: #000;
+}
+
 .board {
-	background-color: #BFD5D8;
+	margin-top: 10px;
 	list-style-type: none;
 	padding: 5px;
+	width: 100%;
 	float: left;
-	width: 255px;
 	min-height: 30px;
 	display: block;
-	margin-right: 10px;
 }
 
 .board li {
@@ -23,25 +38,11 @@ body {
 	padding: 5px;
 	width: 240px;
 	min-height: 30px;
-	font-size: 1.2em;
+	font-size: 0.8em;
 	display: block;
 	background-color: #FFF;
 	border-bottom: 1px solid #999999;
 	border-right: 1px solid #999999;
-}
-
-.board .title {
-	background: none;
-	border: none;
-}
-
-.board .title {
-	display: block;
-	margin: 10px 0px 20px 0px;
-}
-
-.board .title:hover {
-	background-color: inherit;
 }
 
 .board li:hover {

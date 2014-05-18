@@ -13,25 +13,31 @@
 </head>
 <body>
 	<div class="boards ui-widget">
-		<ul id="todo" class="board droptrue ui-corner-all">
-			<li class="title">TODO</li>
-			<li class="ui-corner-all">Can be dropped..</li>
-			<li class="ui-corner-all">..on an empty list</li>
-			<li class="ui-corner-all">Item 3</li>
-			<li class="ui-corner-all">Item 4</li>
-			<li class="ui-corner-all">Item 5</li>
-		</ul>
-		<ul id="progress" class="board dropfalse ui-corner-all">
-			<li class="title">In Progress</li>
-			<li class="ui-corner-all">Cannot be dropped..</li>
-			<li class="ui-corner-all">..on an empty list</li>
-			<li class="ui-corner-all">Item 3</li>
-			<li class="ui-corner-all">Item 4</li>
-			<li class="ui-corner-all">Item 5</li>
-		</ul>
-		<ul id="done" class="board droptrue ui-corner-all">
-			<li class="title">Done</li>
-		</ul>
+		<div class="board-wrapper">
+			<span class="title">TODO</span>	
+			<ul id="todo" class="board droptrue ui-corner-all">
+				<li class="ui-corner-all">Can be dropped..</li>
+				<li class="ui-corner-all">..on an empty list</li>
+				<li class="ui-corner-all">Item 3</li>
+				<li class="ui-corner-all">Item 4</li>
+				<li class="ui-corner-all">Item 5</li>
+			</ul>
+		</div>
+		<div class="board-wrapper">
+			<span class="title">In Progress</span>
+			<ul id="progress" class="board dropfalse ui-corner-all">
+				<li class="ui-corner-all">Cannot be dropped..</li>
+				<li class="ui-corner-all">..on an empty list</li>
+				<li class="ui-corner-all">Item 3</li>
+				<li class="ui-corner-all">Item 4</li>
+				<li class="ui-corner-all">Item 5</li>
+			</ul>
+		</div>
+		<div class="board-wrapper">
+			<span class="title">Done</span>
+			<ul id="done" class="board droptrue ui-corner-all">
+			</ul>
+		</div>
 	</div>
 	<br style="clear: both">
 </body>
