@@ -30,14 +30,11 @@ function initiateBoards() {
 }
 
 function loadExampleData() {
-	$.getJSON("boards/23", function(data) {
+	$.getJSON("board", function(data) {
 		var items = [];
-		$.each(data, function(key, val) {
-			items.push("<li id='" + key + "'>" + val + "</li>");
+		$.each(data.tasks, function(key, val) {
+			items.push("<li class='ui-corner-all' id='" + key + "'>" + val.summary + "</li>");
 		});
-		$("<ul/>", {
-			"class" : "my-new-list",
-			html : items.join("")
-		}).appendTo("body");
+		$(items.join("")).appendTo("#todo");
 	});
 }

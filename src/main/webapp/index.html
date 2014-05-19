@@ -10,18 +10,6 @@
 <script src="js/kanban-board.js"></script>
 
 <title>Kanban Board</title>
-<script type="text/javascript">
-
-	$(document).ready(function() {
-		$.getJSON("board", function(data) {
-			var items = [];
-			$.each(data.tasks, function(key, val) {
-				items.push("<li class='ui-corner-all' id='" + key + "'>" + val.summary + "</li>");
-			});
-			$(items.join("")).appendTo("#todo");
-		});
-	});
-</script>
 </head>
 <body>
 	<div class="boards ui-widget">
