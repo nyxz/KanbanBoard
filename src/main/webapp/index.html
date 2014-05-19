@@ -25,15 +25,21 @@
 </head>
 <body>
 	<div class="boards ui-widget">
-		<ul id="todo" class="board droptrue ui-corner-all">
-			<li class="title">TODO</li>
-		</ul>
-		<ul id="progress" class="board dropfalse ui-corner-all">
-			<li class="title">In Progress</li>
-		</ul>
-		<ul id="done" class="board droptrue ui-corner-all">
-			<li class="title">Done</li>
-		</ul>
+		<div class="board-wrapper">
+			<span class="title">TODO</span>	
+			<ul id="todo" class="board droptrue ui-corner-all">
+			</ul>
+		</div>
+		<div class="board-wrapper">
+			<span class="title">In Progress</span>
+			<ul id="progress" class="board dropfalse ui-corner-all">
+			</ul>
+		</div>
+		<div class="board-wrapper">
+			<span class="title">Done</span>
+			<ul id="done" class="board droptrue ui-corner-all">
+			</ul>
+		</div>
 	</div>
 	<br style="clear: both">
 </body>
