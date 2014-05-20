@@ -36,15 +36,13 @@ public class BoardController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET, produces = APPLICATION_JSON_VALUE)
-	public @ResponseBody
-	Board showBoard() {
+	public @ResponseBody Board showBoard() {
 		return board;
 	}
 
 	@RequestMapping(value = "{taskId}", method = RequestMethod.POST, 
 		consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-	public @ResponseBody
-	Board moveTask(@PathVariable Long taskId, @RequestBody Position position) {
+	public @ResponseBody Board moveTask(@PathVariable Long taskId, @RequestBody Position position) {
 		for (Task task : board.getTasks()) {
 			if (task.getId().equals(taskId)) {
 				task.setStatus(position.getStatus());

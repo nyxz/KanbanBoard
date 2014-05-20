@@ -4,23 +4,32 @@ import java.util.Collection;
 
 public class Board {
 
-	private String name;
-	private Collection<Task> tasks;
+    private int id;
+    private String name;
+    private Collection<Task> tasks;
 
-	public String getName() {
-		return name;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public Collection<Task> getTasks() {
-		return tasks;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setTasks(Collection<Task> tasks) {
-		this.tasks = tasks;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Collection<Task> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(Collection<Task> tasks) {
+        this.tasks = tasks;
+    }
 
 }
