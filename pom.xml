@@ -15,6 +15,23 @@
 		<maven.compiler.source>1.7</maven.compiler.source>
 	</properties>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<url>http://localhost:8080/manager/text</url>
+					<username>tomcat-mvn</username>
+					<password>tomcat-mvn</password>
+					<path>/kanban-board-1.0-SNAPSHOT</path>
+					<update>true</update>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
