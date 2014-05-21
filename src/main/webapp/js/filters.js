@@ -14,7 +14,22 @@ filters.filter('todoTaskFilter', function () {
 	}
 });
 
+filters.filter('inProgressTaskFilter', function () {
+	return function(tasks) {
+		return taskFilter(tasks, STATUS_IN_PROGRESS);
+	}
+});
+
+filters.filter('doneTaskFilter', function () {
+	return function(tasks) {
+		return taskFilter(tasks, STATUS_DONE);
+	}
+});
+
 var taskFilter = function(tasks, status) {
+	if (tasks == undefined || tasks.length == 0) {
+		return;
+	}
 	var filteredTasks = []
 	for (var i = 0; i < tasks.length; i++) {
 		var currTask = tasks[i];

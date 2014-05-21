@@ -2,19 +2,27 @@
 
 <div class="boards ui-widget">
 	<div class="board-wrapper">
-		<span class="title">TODO</span>	
+		<span class="title">TODO</span>
 		<ul id="todo" class="board droptrue ui-corner-all">
-			<li ng-repeat="task in board.tasks"> {{ task }} </li>
+			<li
+				ng-repeat="task in board.tasks | todoTaskFilter | orderBy:priority ">
+				{{ task.summary }} - [{{ task.priority }}] - {{ task.status }}</li>
 		</ul>
 	</div>
 	<div class="board-wrapper">
 		<span class="title">In Progress</span>
 		<ul id="progress" class="board droptrue ui-corner-all">
+			<li
+				ng-repeat="task in board.tasks | inProgressTaskFilter | orderBy:priority ">
+				{{ task.summary }} - [{{ task.priority }}] - {{ task.status }}</li>
 		</ul>
 	</div>
 	<div class="board-wrapper">
 		<span class="title">Done</span>
 		<ul id="done" class="board droptrue ui-corner-all">
+			<li
+				ng-repeat="task in board.tasks | doneTaskFilter | orderBy:priority ">
+				{{ task.summary }} - [{{ task.priority }}] - {{ task.status }}</li>
 		</ul>
 	</div>
 </div>

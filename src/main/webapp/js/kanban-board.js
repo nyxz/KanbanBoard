@@ -25,8 +25,6 @@ function initiateBoards() {
 		dropOnEmpty : false,
 		cancel : ".title"
 	});
-
-	$(TODO + ", " + IN_PROGRESS + ", " + DONE).disableSelection();
 }
 
 function loadExampleData() {
