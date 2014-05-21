@@ -5,7 +5,5 @@
 var services = angular.module('kanbanServices', ['ngResource']);
 
 services.factory('KanbanService', ['$resource', function($resource) {
-	return $resource('board', {}, {
-		query: {method: 'GET', isArray: true}
-	});
+	return $resource('board', {}, {});
 }]);
