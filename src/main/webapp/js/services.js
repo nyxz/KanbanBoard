@@ -4,6 +4,6 @@
 
 var services = angular.module('kanbanServices', ['ngResource']);
 
-services.factory('KanbanService', ['$resource', function($resource) {
-	return $resource('board', {}, {});
+services.service('KanbanService', ['$resource', function($resource) {
+	this.getDefaultBoard = $resource('board', {}, {});
 }]);
