@@ -4,7 +4,7 @@ var DONE = '#done';
 
 
 $(document).ready(function() {
-	// loadExampleData();
+//	loadExampleData();
 	initiateBoards();
 });
 
