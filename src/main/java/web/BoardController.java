@@ -4,6 +4,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import javax.annotation.PostConstruct;
 
@@ -20,36 +21,40 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.CollectionType;
 
 @Controller
 @RequestMapping("/board")
 public class BoardController {
 
-	private Board board;
+	private List<Board> boards;
 
-	@PostConstruct
+    @PostConstruct
 	public void init() throws JsonParseException, JsonMappingException, IOException {
-		ObjectMapper mapper = new ObjectMapper();
-		InputStream sampleBoard = Thread.currentThread().getContextClassLoader()
+	    final ObjectMapper mapper = new ObjectMapper();
+		final InputStream sampleBoard = Thread.currentThread().getContextClassLoader()
 				.getResourceAsStream("example-board.json");
-		board = mapper.readValue(sampleBoard, Board.class);
+		final CollectionType boardListType = mapper.getTypeFactory().constructCollectionType(List.class, Board.class);
+
+		boards = mapper.readValue(sampleBoard, boardListType);
 	}
 
 	@RequestMapping(method = RequestMethod.GET, produces = APPLICATION_JSON_VALUE)
 	public @ResponseBody Board showBoard() {
-		return board;
+		return boards.get(0);
 	}
 
 	@RequestMapping(value = "{taskId}", method = RequestMethod.POST, 
 		consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
 	public @ResponseBody Board moveTask(@PathVariable Long taskId, @RequestBody Position position) {
-		for (Task task : board.getTasks()) {
+	    // TODO make it accept 
+		for (Task task : boards.get(0).getTasks()) {
 			if (task.getId().equals(taskId)) {
 				task.setStatus(position.getStatus());
 				task.setPriority(position.getPriority());
 			}
 		}
-		return board;
+		return boards.get(0);
 	}
 
 }

@@ -1,20 +1,71 @@
-{
-	"id" : 1,
-	"name": "Simple Kanban board",
-	"tasks": [
-		{
-			"id": 1,
-			"summary": "Create GitHub project",
-			"description": "Prepare GitHub project where to build the prsentation app",
-			"status": "TODO",
-			"priority": 1
-		}, 
-		{
-			"id": 2,
-			"summary": "Create app skeleton",
-			"description": "Create the app skeleton with Maven and Spring MVC",
-			"status": "TODO",
-			"priority": 2
-		}
-	]
-}
+[
+	{
+		"id" : 1,
+		"name": "Simple Kanban board",
+		"tasks": [
+			{
+				"id": 1,
+				"summary": "Create GitHub project",
+				"description": "Prepare GitHub project where to build the presentation app",
+				"status": "TODO",
+				"priority": 1
+			}, 
+			{
+				"id": 2,
+				"summary": "Create app skeleton",
+				"description": "Create the app skeleton with Maven and Spring MVC",
+				"status": "IN_PROGRESS",
+				"priority": 1
+			}
+		]
+	},
+	{
+		"id" : 2,
+		"name": "Another simple board",
+		"tasks": [
+			{
+				"id": 1,
+				"summary": "Do this",
+				"description": "Hire more Indian people to work on the project",
+				"status": "TODO",
+				"priority": 1
+			}, 
+			{
+				"id": 2,
+				"summary": "Do that",
+				"description": "Beat the Indian devs to work harder",
+				"status": "TODO",
+				"priority": 2
+			}
+		]
+	},
+	{
+		"id" : 3,
+		"name": "Yet another simple kanban board",
+		"tasks": [
+			{
+				"id": 1,
+				"summary": "Whew! That was hard to do.",
+				"description": "A super hard to do task, but with high priority!",
+				"status": "DONE",
+				"priority": 1
+			}, 
+			{
+				"id": 2,
+				"summary": "This task have the same priority as the hard one.",
+				"description": "Same priority task.",
+				"status": "DONE",
+				"priority": 1
+			}, 
+			{
+				"id": 3,
+				"summary": "Nah. This is an easy one, but it was not so important.",
+				"description": "No need of description.",
+				"status": "DONE",
+				"priority": 5
+			}
+		]
+	}
+	
+
+]
