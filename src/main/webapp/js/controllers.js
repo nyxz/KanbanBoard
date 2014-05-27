@@ -4,6 +4,7 @@
 
 var kanbanControllers = angular.module('kanbanControllers', []);
 
-kanbanControllers.controller('LoadBoardController', ['$scope', 'KanbanService', function ($scope, KanbanService) {
-	$scope.board = KanbanService.getDefaultBoard.get();
+kanbanControllers.controller('LoadBoardController', ['$scope', '$routeParams', 'KanbanService', 
+                                                     function ($scope, $routeParams, KanbanService) {
+	$scope.board = KanbanService.loadBoard.get({projectId: $routeParams.projectId});
 }]);

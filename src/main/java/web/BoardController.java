@@ -39,15 +39,20 @@ public class BoardController {
 		boards = mapper.readValue(sampleBoard, boardListType);
 	}
 
-	@RequestMapping(method = RequestMethod.GET, produces = APPLICATION_JSON_VALUE)
-	public @ResponseBody Board showBoard() {
-		return boards.get(0);
+	@RequestMapping(value = "{projectId}", method = RequestMethod.GET, produces = APPLICATION_JSON_VALUE)
+	public @ResponseBody Board showBoard(@PathVariable Long projectId) {
+		try {
+            return boards.get(projectId.intValue());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Board();
+        }
 	}
 
 	@RequestMapping(value = "{taskId}", method = RequestMethod.POST, 
 		consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
 	public @ResponseBody Board moveTask(@PathVariable Long taskId, @RequestBody Position position) {
-	    // TODO make it accept 
+	    // TODO make it accept project and task (mandatory)
 		for (Task task : boards.get(0).getTasks()) {
 			if (task.getId().equals(taskId)) {
 				task.setStatus(position.getStatus());
