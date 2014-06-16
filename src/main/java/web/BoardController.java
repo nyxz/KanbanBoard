@@ -39,15 +39,20 @@ public class BoardController {
 		boards = mapper.readValue(sampleBoard, boardListType);
 	}
 
-	@RequestMapping(value = "{projectId}", method = RequestMethod.GET, produces = APPLICATION_JSON_VALUE)
-	public @ResponseBody Board showBoard(@PathVariable Long projectId) {
-		try {
-            return boards.get(projectId.intValue());
+    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = APPLICATION_JSON_VALUE)
+    public @ResponseBody List<Board> getBoards() {
+        return boards;
+    }
+
+    @RequestMapping(value = "{boardId}", method = RequestMethod.GET, produces = APPLICATION_JSON_VALUE)
+    public @ResponseBody Board getBoard(@PathVariable Long boardId) {
+        try {
+            return boards.get(boardId.intValue());
         } catch (Exception e) {
             e.printStackTrace();
             return new Board();
         }
-	}
+    }
 
 	@RequestMapping(value = "{taskId}", method = RequestMethod.POST, 
 		consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
@@ -61,5 +66,4 @@ public class BoardController {
 		}
 		return boards.get(0);
 	}
-
 }

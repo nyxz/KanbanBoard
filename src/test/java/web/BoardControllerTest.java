@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,7 @@ public class BoardControllerTest {
 		mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
 	}
 
+	@Ignore
 	@Test
 	public void testShowBoard() throws Exception {
 		mockMvc.perform(
@@ -41,6 +43,7 @@ public class BoardControllerTest {
 		// .andExpect(content().string(""))
 	}
 
+	@Ignore
 	@Test
 	public void testMoveTask() throws Exception {
 		mockMvc.perform(

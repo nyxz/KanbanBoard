@@ -1,0 +1,8 @@
+<!-- TODO use Routing to display this template in the index page -->
+
+<div class="container">
+	<div ng-repeat="board in boards" class="board-info">
+		<span class="board-title">{{ board.name }}</span>
+		<span class="baord-tasks-count">Tasks count: {{ board.tasks.length }}</span>
+	</div>
+</div>

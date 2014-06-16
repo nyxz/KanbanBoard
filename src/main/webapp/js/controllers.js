@@ -8,3 +8,9 @@ kanbanControllers.controller('LoadBoardController', ['$scope', '$routeParams', '
                                                      function ($scope, $routeParams, KanbanService) {
 	$scope.board = KanbanService.loadBoard.get({boardId: $routeParams.boardId});
 }]);
+
+
+kanbanControllers.controller('LoadAllBoardsController', ['$scope', 'KanbanService', 
+                                                     function ($scope, KanbanService) {
+	$scope.boards = KanbanService.loadBoards.query();
+}]);

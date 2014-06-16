@@ -5,7 +5,7 @@
 		<span class="board-name">{{ board.name }}</span>
 	</div>
 	<div class="task-list-wrapper">
-		<span class="title">TODO</span>
+		<span class="task-title">TODO</span>
 		<ul id="todo" class="task-list droptrue ui-corner-all">
 			<li
 				ng-repeat="task in board.tasks | todoTaskFilter | orderBy:priority ">
@@ -13,7 +13,7 @@
 		</ul>
 	</div>
 	<div class="task-list-wrapper">
-		<span class="title">In Progress</span>
+		<span class="task-title">In Progress</span>
 		<ul id="progress" class="task-list droptrue ui-corner-all">
 			<li
 				ng-repeat="task in board.tasks | inProgressTaskFilter | orderBy:priority ">
@@ -21,7 +21,7 @@
 		</ul>
 	</div>
 	<div class="task-list-wrapper">
-		<span class="title">Done</span>
+		<span class="task-title">Done</span>
 		<ul id="done" class="task-list droptrue ui-corner-all">
 			<li
 				ng-repeat="task in board.tasks | doneTaskFilter | orderBy:priority ">
