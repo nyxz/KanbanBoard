@@ -11,19 +11,19 @@ var filters = angular.module('kanbanBoardFilters', []);
 filters.filter('todoTaskFilter', function () {
 	return function(tasks) {
 		return taskFilter(tasks, STATUS_TODO);
-	}
+	};
 });
 
 filters.filter('inProgressTaskFilter', function () {
 	return function(tasks) {
 		return taskFilter(tasks, STATUS_IN_PROGRESS);
-	}
+	};
 });
 
 filters.filter('doneTaskFilter', function () {
 	return function(tasks) {
 		return taskFilter(tasks, STATUS_DONE);
-	}
+	};
 });
 
 var taskFilter = function(tasks, status) {
