@@ -8,17 +8,17 @@ body {
 	background-color: rgb(35, 113, 159);
 }
 
-.boards {
+.board {
 	width: 1000px;
 	margin: 140px auto 0 auto;
 }
 
-.boards .project-details {
+.board .board-details {
 	margin: 5px 0 15px 0;
 	color: #FFF;
 }
 
-.board-wrapper {
+.task-list-wrapper {
 	width: 278px;
 	margin-right: 25px;
 	float: left;
@@ -27,14 +27,14 @@ body {
 	border-radius: 5px 5px 5px 5px;
 }
 
-.board-wrapper .title {
+.task-list-wrapper .title {
 	display: block;
 	margin-top: 20px;
 	margin-left: 10px;
 	color: #000;
 }
 
-.board {
+.task-list {
 	margin-top: 10px;
 	list-style-type: none;
 	padding: 5px;
@@ -44,7 +44,7 @@ body {
 	display: block;
 }
 
-.board li {
+.task-list li {
 	margin: 5px;
 	padding: 5px;
 	width: 240px;
@@ -57,7 +57,7 @@ body {
 	cursor: pointer;
 }
 
-.board li.dragged {
+.task-list li.dragged {
 	-moz-transform: rotate(5deg);
 	-webkit-transform: rotate(5deg);
 	-o-transform: rotate(5deg);
