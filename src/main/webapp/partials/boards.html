@@ -1,8 +1,12 @@
-<!-- TODO use Routing to display this template in the index page -->
-
 <div class="container">
-	<div ng-repeat="board in boards" class="board-info">
+	<span class="section-title">Your boards</span>
+	<div ng-repeat="board in boards" class="board-info round glossy">
 		<span class="board-title">{{ board.name }}</span>
 		<span class="baord-tasks-count">Tasks count: {{ board.tasks.length }}</span>
+		<div class="shy">
+			<a class="button" href="#/board/{{ board.id }}">
+	        	<span>Open</span>
+	    	</a>
+		</div>
 	</div>
 </div>

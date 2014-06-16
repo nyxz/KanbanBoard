@@ -4,7 +4,7 @@
 	<div class="board-details">
 		<span class="board-name">{{ board.name }}</span>
 	</div>
-	<div class="task-list-wrapper">
+	<div class="task-list-wrapper round">
 		<span class="task-title">TODO</span>
 		<ul id="todo" class="task-list droptrue ui-corner-all">
 			<li
@@ -12,7 +12,7 @@
 				{{ task.summary }} - [{{ task.priority }}] - {{ task.status }}</li>
 		</ul>
 	</div>
-	<div class="task-list-wrapper">
+	<div class="task-list-wrapper round">
 		<span class="task-title">In Progress</span>
 		<ul id="progress" class="task-list droptrue ui-corner-all">
 			<li
@@ -20,7 +20,7 @@
 				{{ task.summary }} - [{{ task.priority }}] - {{ task.status }}</li>
 		</ul>
 	</div>
-	<div class="task-list-wrapper">
+	<div class="task-list-wrapper round">
 		<span class="task-title">Done</span>
 		<ul id="done" class="task-list droptrue ui-corner-all">
 			<li
