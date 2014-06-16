@@ -13,6 +13,11 @@ body {
 	margin: 140px auto 0 auto;
 }
 
+.boards .project-details {
+	margin: 5px 0 15px 0;
+	color: #FFF;
+}
+
 .board-wrapper {
 	width: 278px;
 	margin-right: 25px;
