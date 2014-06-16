@@ -10,7 +10,7 @@ var kanbanBoard = angular.module("kanbanApp", ['ngRoute',
 
 kanbanBoard.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider
-		.when('/board/:projectId', {
+		.when('/board/:boardId', {
 			templateUrl: 'partials/board.html',
 			controller: 'LoadBoardController'
 		})
