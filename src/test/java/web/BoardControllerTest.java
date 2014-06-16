@@ -35,7 +35,7 @@ public class BoardControllerTest {
 	@Test
 	public void testShowBoard() throws Exception {
 		mockMvc.perform(
-			get("/board").accept(APPLICATION_JSON))
+			get("api/board").accept(APPLICATION_JSON))
 			.andExpect(status().isOk())
 			.andDo(print());
 		// .andExpect(content().string(""))
@@ -44,7 +44,7 @@ public class BoardControllerTest {
 	@Test
 	public void testMoveTask() throws Exception {
 		mockMvc.perform(
-			post("/board/{taskId}", 1).accept(APPLICATION_JSON)
+			post("api/board/{taskId}", 1).accept(APPLICATION_JSON)
 				.content("{ \"status\": \"IN_PROGRESS\", \"priority\": 1 }")
 				.contentType(APPLICATION_JSON))
 			.andExpect(status().isOk()).andDo(print());
